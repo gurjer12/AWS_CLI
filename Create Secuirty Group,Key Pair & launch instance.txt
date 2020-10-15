@@ -1,0 +1,77 @@
+Launch Instance-- run instances
+
+1. Selecting ami:
+
+--image-id    ami-0e306788ff2473ccb
+
+2. Choose Instnace Type: 
+
+--instance-type      t2.micro
+
+3. Number of instances
+
+--count 2
+
+4. Subnet :
+
+--subnet-id        subnet-502f571c
+
+5. Storage: By default 8gb.. So no needed to mention
+
+6. Configuring Security Group:
+
+--security-group-ids      sg-eea2c389
+
+7. Key Pair Name: 
+
+--key-name     awsclass2020key
+
+awsclass2020key
+
+----->CLI commnad for start Instance:
+
+----->Start Instance: 
+
+aws ec2 start-instances --instance-ids i-087fe1ff587682f4c
+
+----->Stop Instance: 
+
+aws ec2 stop-instances --instance-ids i-087fe1ff587682f4c
+
+----->Terminate Instances:
+
+aws ec2 terminate-instances --instance-ids i-087fe1ff587682f4c
+
+----->Launch Instance:
+
+aws ec2 run-instances --image-id ami-0e306788ff2473ccb --instance-type t2.micro --count 2 --subnet-id subnet-502f571c --security-group-ids sg-eea2c389 --key-name awsclass2020key
+
+----->Key Pair Creation:
+
+C:\WINDOWS\system32>aws ec2 create-key-pair --key-name MyAniPair
+
+Output :
+
+{
+    "KeyFingerprint": "2a:c5:f8:f8:4a:7d:c6:2c:87:d2:bd:b5:78:9c:e6:23:63:75:6d:0c",
+    "KeyMaterial": "-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEAnkO6oZU9/oVOiZHtfcq+VdsivGggoRRWSyQuPRL5YMTC+itt\nCuGAsoY5kRcurYNscsnSf199dWad790ouEdExr3O//T56IbLIl5la2ThOnXeo0Tz\n5w5Y1FDTDpO9vVw6FcINkVLigKjds+71FcNWFodPGWLZr25Pkukc0qM2mx4fcqkx\nrznh+5CKlEAGgxJKJYCsPCQ7SGhKBfuAupYdgQWhsZi0/cP52vkZIpaKetW3jN1O\nB4XV7Y2V0ZRD0Qy/FtMis6albCxlz2YHR9Vdmf8WSTW18m9qS9ahPeC57BNzReLS\nS6aPjfRPzE5TpAHxmqPn2TBmj1d1ACw6a88OAwIDAQABAoIBAB1N/zXCM6t4NZWl\njqsXKm0tWV43jasl3+Cj/2fRpplzdYLrHZLBNJpZ3jjuaPc5+Y+7rR1mqg1eBeqP\nMeYFVEfUh4q/arLSmrRvdCoRkN7JSoNC1kK3Vl1h5eKyGpUAicTTnL2G8mfOXNbf\nbUQtWjhrr4rM0e/45gUW4v5huE+6VUFfksNJJDoC7MkCB3rCKGdWOJdkHjJJu+LA\n8lCatdYbecMPNth2ouulQ9lPd0c/jP4x6HPpjz0ddDPHP95pIfa+RXK+Mqu1coon\nI5kFmyJ5XRKEVOQRC5wcWbZ+0y19QjkVTY1MlAr3e6Qv60XMG0UAYV+3o9LfIZlF\nHZYCKJkCgYEA87gdM1dXOwGCYJrc3g/Sp6OB16sGgJ9GuOd90xYEM8oabXQghY2i\n51sNvRDwQNXkKB0N99YrcdoI+U6/YiZFQAE2oR5mg5sHDf1zj2VaUuMezrVkfBfs\nTSuIbIf33qDgPUn8tllQpk1YBDHmMOoZYOJC3XIe2akX/6baSWy1Ok8CgYEApj1I\nSyglqde1NNcMBW9wFsHnNE8HSqytPWZeWWp9/TCi2PevNKfP/gJvugS2CLIccYHD\nwy20Bk+2HfOEUsUbaI53JCCeQPTmrsPiBMgQa1p8dn9YfCZf7rYxhODvIQfPaWio\npKLSbwK5kFHd7RBfe2k2kQOfKAy6WpHSOq6laA0CgYEAt4XexzhvwUkDqkczJix4\nDjA7p/FrNhO6J6Z5wygDBhScDeuySZ88Gkcgc0x7/faSlfo6+HNXx6XNuB4qU3hK\nEUZYor7HpzZn+4rtJ//EIkJQgotpHWDOWdX8Ju3EIuq1sLE0EQP0jSYUryP8GL1P\nWvtGKoay4GhKYAJ+wWeQmFUCgYAE5pGXBZv2odFJuX01O8/GG/lA5YOFhAmnYbku\nUaFdMW3bj5Gur7PF/TRl+3WSVA3amsS2oEZKWVc5EtC3z++66VhBzGRd7dpPFJ85\nHNy/DW/V3nMxVcBGPUDAdhEWnDBVHyy5jcM+Woo14vPz5SOrc7KUG9M5Twa/XMUh\nzbw6kQKBgGqjUf8+M52BYnYvPDWqmXLqmTG47AaAQjSBaWTlix8GqtlPuec+kgHy\nYXxGIji25ZD5LWGwihuecl+sracnn1iH2B8PUh/KbXoC/D8v2kgWuusKXjWtpeB7\nEf3kXZCAvwoxQw8oWhCTrrc8ycsNWrRoytvhn9k9Wg/1SzGIMYQ5\n-----END RSA PRIVATE KEY-----",
+    "KeyName": "MyAniPair",
+    "KeyPairId": "key-061178c934a0efc7c"
+}
+
+
+-----------> Create Security Group: 
+
+C:\WINDOWS\system32>aws ec2 create-security-group --description MySecurityGroup --group-name MySecurity
+
+              Output: 
+
+{
+    "GroupId": "sg-09933e5b192c15b57"
+}
+
+
+
+
+
+

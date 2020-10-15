@@ -1,0 +1,19 @@
+
+------>Create Volume:
+
+>aws ec2 create-volume --volume-type gp2  --size 1  --availability-zone ap-south-1a
+
+
+------>Attach EBS Volume to the Instance:
+
+C:\WINDOWS\system32>aws ec2 attach-volume --volume-id vol-0859d035b939a3b35                                                --instance-id i-01b5929be3d08587d --device /dev/sdf
+{
+    "AttachTime": "2020-10-14T19:26:54.287000+00:00",
+    "Device": "/dev/sdf",
+    "InstanceId": "i-01b5929be3d08587d",
+    "State": "attaching",
+    "VolumeId": "vol-0859d035b939a3b35"
+}
+
+
+But make sure that both Volume AZ and Instance AZ should be the same.
